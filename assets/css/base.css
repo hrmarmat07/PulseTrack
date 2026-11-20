@@ -1,0 +1,179 @@
+:root {
+    --ink: black;
+    --ink-soft: #4f636b;
+    --ink-faint: #7d8f96;
+    --paper: #f2f6f5;
+    --panel: #ffffff;
+    --line: #d9e3e0;
+    --teal: darkgreen;
+    --teal-dark: #0a444b;
+    --teal-tint: #e4f0ef;
+    --pulse: #cf3a4d;
+    --oxygen: #2b6cb0;
+    --danger: #b3261e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+a {
+    color: var(--teal);
+}
+
+.muted {
+    color: var(--ink-soft);
+}
+
+button,
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    border: 1px solid var(--teal);
+    border-radius: 6px;
+    background: var(--teal);
+    color: #ffffff;
+    font: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--teal-dark);
+    border-color: var(--teal-dark);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink-soft);
+}
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #b9c8c4;
+    border-radius: 6px;
+    background: #ffffff;
+    color: var(--ink);
+    font: inherit;
+    font-size: 17px;
+}
+
+input:focus {
+    border-color: var(--teal);
+    outline: 3px solid #bfe0e3;
+}
+
+.nav {
+    background: var(--panel);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 32px;
+    min-height: 74px;
+}
+
+.wordmark {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.wordmark b {
+    color: var(--teal);
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    margin-right: auto;
+}
+
+.nav-links a {
+    padding: 24px 16px 21px;
+    border-bottom: 3px solid transparent;
+    color: var(--ink-soft);
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links a.current,
+.nav-links a:hover {
+    color: var(--ink);
+}
+
+.nav-links a.current {
+    border-bottom-color: var(--teal);
+}
+
+.nav-user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+    color: var(--ink-soft);
+}
+
+.nav-user a {
+    color: var(--danger);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.page {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 40px 32px 80px;
+}
+
+.page-title {
+    margin-bottom: 32px;
+}
+
+.page-title h1 {
+    font-size: 38px;
+}
+
+.page-title p {
+    margin-top: 8px;
+    font-size: 18px;
+}

@@ -1,0 +1,157 @@
+.watch-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding: 24px 28px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.watch-state {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #aab6ba;
+}
+
+.dot.online {
+    background: #2e8b57;
+    box-shadow: 0 0 0 4px rgba(46, 139, 87, 0.18);
+}
+
+#connectionStatus {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+#connectedWatchName {
+    font-size: 16px;
+    color: var(--ink-soft);
+}
+
+.vitals {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--panel);
+}
+
+.vital {
+    padding: 40px 42px;
+}
+
+.vital + .vital {
+    border-left: 1px solid var(--line);
+}
+
+.vital-name {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--ink-soft);
+}
+
+.vital-number {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.vital-number strong {
+    font-size: 76px;
+    line-height: 1;
+}
+
+.vital-number span {
+    font-size: 20px;
+    color: var(--ink-soft);
+}
+
+.vital.heart strong {
+    color: var(--pulse);
+}
+
+.vital.oxygen strong {
+    color: var(--oxygen);
+}
+
+.vital-note {
+    margin-top: 14px;
+    font-size: 16px;
+    color: var(--ink-faint);
+}
+
+.today {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 30px;
+}
+
+.today-item {
+    padding: 32px 34px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-left: 6px solid var(--teal);
+    border-radius: 10px;
+}
+
+.today-item.sleep {
+    border-left-color: #6b5fb5;
+}
+
+.today-item span {
+    display: block;
+    font-size: 18px;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+}
+
+.today-item strong {
+    font-size: 46px;
+}
+
+.today-item small {
+    margin-left: 8px;
+    font-size: 18px;
+    color: var(--ink-faint);
+}
+
+.next-step {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+    padding: 28px 32px;
+    background: var(--teal-tint);
+    border-radius: 10px;
+}
+
+.next-step p {
+    font-size: 18px;
+}
+
+@media (max-width: 750px) {
+    .vitals,
+    .today {
+        grid-template-columns: 1fr;
+    }
+
+    .vital + .vital {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+    }
+}
